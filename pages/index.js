@@ -17,7 +17,7 @@ const Home = () => {
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(outputTokens.join(" "));
+    navigator.clipboard.writeText(outputTokens.join(", "));
   };
 
   const handleDelete = () => {
@@ -79,7 +79,7 @@ const Home = () => {
           </div>
         </div>
         <div className="w-full max-w-2xl mx-auto">
-          <OutputBox tokens={outputTokens} />
+          <OutputBox tokens={outputTokens} onCopy={handleCopy} />
         </div>
         <div className="flex justify-center mt-4">
           <ControlButtons
