@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCopy,
   faSave,
   faTrash,
   faRandom,
@@ -8,7 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const ControlButtons = ({
-  onCopy,
   onDelete,
   onSave,
   onShuffle,
@@ -16,12 +14,6 @@ const ControlButtons = ({
 }) => {
   return (
     <div className="flex mt-4">
-      <button
-        className="bg-green-500 text-white px-4 py-2 mr-2 rounded-md focus:outline-none hover:bg-green-600"
-        onClick={onCopy}
-      >
-        <FontAwesomeIcon icon={faCopy} /> Copy
-      </button>
       <button
         className="bg-red-500 text-white px-4 py-2 mr-2 rounded-md focus:outline-none hover:bg-red-600"
         onClick={onDelete}

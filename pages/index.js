@@ -83,7 +83,6 @@ const Home = () => {
         </div>
         <div className="flex justify-center mt-4">
           <ControlButtons
-            onCopy={handleCopy}
             onDelete={handleDelete}
             onSave={handleSave}
             onShuffle={handleShuffle}
