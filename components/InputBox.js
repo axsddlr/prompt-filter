@@ -1,4 +1,3 @@
-// components/InputBox.js
 import { useState } from 'react';
 
 const InputBox = ({ onTokensGenerated }) => {
@@ -10,9 +9,10 @@ const InputBox = ({ onTokensGenerated }) => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex items-center">
+      <label htmlFor="inputBox" className="block text-gray-700 dark:text-gray-300 text-sm font-bold mr-2">Input:</label>
       <input
-        className="w-full p-2 bg-gray-200 dark:bg-gray-800 dark:text-white rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        className="flex-grow p-2 bg-gray-200 dark:bg-gray-800 dark:text-white rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
         type="text"
         placeholder="Enter your prompt..."
         value={input}
