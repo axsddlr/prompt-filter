@@ -21,7 +21,7 @@ const ControlButtons = ({
         <FontAwesomeIcon icon={faTrash} /> Delete
       </button>
       <button
-        className="bg-yellow-500 text-white px-4 py-2 mr-2 rounded-md focus:outline-none hover:bg-yellow-600"
+        className="bg-teal-500 text-white px-4 py-2 mr-2 rounded-md focus:outline-none hover:bg-teal-600"
         onClick={onSave}
       >
         <FontAwesomeIcon icon={faSave} /> Save
