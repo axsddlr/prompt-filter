@@ -37,15 +37,26 @@ const Home = () => {
     setOutputTokens(shuffledOutputTokens);
   };
 
+  const handleRemoveDuplicates = () => {
+    const uniqueTokens = [...new Set(tokens)];
+    setTokens(uniqueTokens);
+  };
+
   const handleSave = () => {
-    const blob = new Blob([outputTokens.join(" ")], { type: "text/plain" });
+    if (outputTokens.length === 0) {
+      alert("Output box is empty. Cannot save an empty file.");
+      return;
+    }
+
+    const blob = new Blob([outputTokens.join(", ")], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "output.txt";
+    link.download = "prompt.txt";
     link.click();
     URL.revokeObjectURL(url);
   };
+
   return (
     <div className="bg-gray-100 dark:bg-gray-900 min-h-screen p-8 flex flex-col">
       <Header />
@@ -76,6 +87,7 @@ const Home = () => {
             onDelete={handleDelete}
             onSave={handleSave}
             onShuffle={handleShuffle}
+            onRemoveDuplicates={handleRemoveDuplicates}
           />
         </div>
       </div>
