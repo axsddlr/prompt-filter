@@ -15,9 +15,9 @@ const OutputBox = ({ tokens }) => {
       <div className="relative">
         <textarea
           ref={textAreaRef}
-          className="w-full p-2 bg-gray-200 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full p-2 bg-gray-300 dark:bg-gray-800 dark:text-white rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
           rows="5"
-          placeholder="tokens will appear here..."
+          placeholder="Tokens will appear here..."
           readOnly
           value={tokens.join(", ")}
         ></textarea>

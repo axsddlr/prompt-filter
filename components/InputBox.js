@@ -19,7 +19,7 @@ const InputBox = ({ onTokensGenerated }) => {
         Input:
       </label> */}
       <input
-        className="flex-grow p-2 bg-gray-200 dark:bg-gray-800 dark:text-white rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        className="flex-grow p-2 bg-gray-300 dark:bg-gray-800 dark:text-white rounded-l-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
         type="text"
         placeholder="Enter your prompt..."
         value={input}
