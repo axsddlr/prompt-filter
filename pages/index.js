@@ -4,7 +4,7 @@ import InputBox from '@/components/InputBox';
 import TokenButton from '@/components/TokenButton';
 import OutputBox from '@/components/OutputBox';
 import ControlButtons from '@/components/ControlButtons';
-import DarkModeToggle from '@/components/DarkModeToggle';
+import ThemeSwitch from '@/components/ThemeSwitch';
 
 const Home = () => {
   const [tokens, setTokens] = useState([]);
@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <div className="bg-gray-100 dark:bg-gray-900 min-h-screen p-8 flex flex-col">
       <div className="fixed top-4 right-4">
-        <DarkModeToggle />
+        <ThemeSwitch />
       </div>
       <div className="mt-16 flex-grow">
         <div className="w-full max-w-2xl mx-auto">
