@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCopy, faSave, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faCopy, faSave, faTrash, faRandom } from '@fortawesome/free-solid-svg-icons';
 
-const ControlButtons = ({ onCopy, onDelete, onSave }) => {
+const ControlButtons = ({ onCopy, onDelete, onSave, onShuffle }) => {
   return (
     <div className="flex mt-4">
       <button className="bg-green-500 text-white px-4 py-2 mr-2 rounded-md focus:outline-none hover:bg-green-600" onClick={onCopy}>
@@ -10,11 +10,14 @@ const ControlButtons = ({ onCopy, onDelete, onSave }) => {
       <button className="bg-red-500 text-white px-4 py-2 mr-2 rounded-md focus:outline-none hover:bg-red-600" onClick={onDelete}>
         <FontAwesomeIcon icon={faTrash} /> Delete
       </button>
-      <button className="bg-yellow-500 text-white px-4 py-2 rounded-md focus:outline-none hover:bg-yellow-600" onClick={onSave}>
+      <button className="bg-yellow-500 text-white px-4 py-2 mr-2 rounded-md focus:outline-none hover:bg-yellow-600" onClick={onSave}>
         <FontAwesomeIcon icon={faSave} /> Save
+      </button>
+      <button onClick={onShuffle} className="rounded-md px-4 py-2 bg-indigo-500 text-white focus:outline-none hover:bg-indigo-600">
+        <FontAwesomeIcon icon={faRandom} /> Shuffle
       </button>
     </div>
   );
-  };
-  
-  export default ControlButtons;
+};
+
+export default ControlButtons;

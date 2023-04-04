@@ -23,6 +23,15 @@ const Home = () => {
     setOutputTokens([]);
   };
 
+  const handleShuffle = () => {
+    let shuffledOutputTokens = [...outputTokens];
+    for (let i = shuffledOutputTokens.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledOutputTokens[i], shuffledOutputTokens[j]] = [shuffledOutputTokens[j], shuffledOutputTokens[i]];
+    }
+    setOutputTokens(shuffledOutputTokens);
+  };
+
   const handleSave = () => {
     const blob = new Blob([outputTokens.join(' ')], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -52,7 +61,7 @@ const Home = () => {
           <OutputBox tokens={outputTokens} />
         </div>
         <div className="flex justify-center mt-4">
-          <ControlButtons onCopy={handleCopy} onDelete={handleDelete} onSave={handleSave} />
+          <ControlButtons onCopy={handleCopy} onDelete={handleDelete} onSave={handleSave} onShuffle={handleShuffle} />
         </div>
       </div>
     </div>
