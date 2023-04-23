@@ -2,6 +2,8 @@
 
 Prompt Filter is a Next.js and Tailwind CSS v3.0 app that helps you filter and organize prompts containing special characters like (), (()), [], and [[]]. The app allows you to break down your prompts into individual tokens, which can be manipulated and rearranged as needed.
 
+inspired by [NapoII's Prompt-Filter](https://github.com/NapoII/Prompt-Filter)
+
 ## Features
 
 - Break down prompts into tokens using commas as separators
